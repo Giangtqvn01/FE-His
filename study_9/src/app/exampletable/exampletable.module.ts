@@ -11,6 +11,8 @@ import { ExampletableComponent } from './pages/list/exampletable.component';
 import { CreateComponent } from './pages/create/create.component';
 import { ExampletableFormComponent } from './componets/exampletable-form/exampletable-form.component';
 import { UpdateComponent } from './pages/update/update.component';
+import { NzCardModule } from 'ng-zorro-antd/card'; 
+
 @NgModule({
     declarations: [
         ExampletableComponent,
@@ -26,7 +28,8 @@ import { UpdateComponent } from './pages/update/update.component';
         NzFormModule,
         FormsModule,
         ReactiveFormsModule,
-        NzSelectModule
+        NzSelectModule,
+        NzCardModule
     ]
 })
 export class ExampletableModule { }

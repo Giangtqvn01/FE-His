@@ -6,46 +6,49 @@
     //     disabled: boolean;
     //     gender: string
     //   } -->
-<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Tên</nz-form-label>
-        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
-            <input nz-input formControlName="name" id="name" />
-        </nz-form-control>
-    </nz-form-item>
+<nz-card style="width: 500px; margin: 100px auto; border-radius: 3px;" nzTitle="Thêm mới" >
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Tên</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
+                <input nz-input formControlName="name" id="name" />
+            </nz-form-control>
+        </nz-form-item>
 
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="age">Tuổi</nz-form-label>
-        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
-            <input  type="number" formControlName="age" id="age" />
-        </nz-form-control>
-    </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="age">Tuổi</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
+                <input type="number" formControlName="age" id="age" />
+            </nz-form-control>
+        </nz-form-item>
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="address">Địa chị</nz-form-label>
-        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
-            <input formControlName="address" id="address" />
-        </nz-form-control>
-    </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="address">Địa chị</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
+                <input formControlName="address" id="address" />
+            </nz-form-control>
+        </nz-form-item>
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="gender">Giới tính</nz-form-label>
-        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
-            <input  nz-input formControlName="gender" id="gender" />
-        </nz-form-control>
-    </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="gender">Giới tính</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
+                <input nz-input formControlName="gender" id="gender" />
+            </nz-form-control>
+        </nz-form-item>
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="disabled">Hiệu lực</nz-form-label>
-        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
-            <input type="checkbox" nz-input formControlName="disabled" id="disabled" />
-        </nz-form-control>
-    </nz-form-item>
-   
-    <nz-form-item nz-row class="register-area">
-        <nz-form-control [nzSpan]="14" [nzOffset]="6">
-            <button nz-button nzType="primary">Register</button>
-        </nz-form-control>
-    </nz-form-item>
-</form>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="disabled">Hiệu lực</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid name!">
+                <input type="checkbox" nz-input formControlName="disabled" id="disabled" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item nz-row class="register-area">
+            <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                <button nz-button nzType="primary">Lưu</button>
+                <button style="margin-left: 5px;" nz-button nzType="primary" (click)="cancel()">Hủy</button>
+            </nz-form-control>
+        </nz-form-item>
+    </form>
+</nz-card>

@@ -1,9 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
 import { HttpService } from 'src/app/http.service';
 
 @Component({
@@ -30,5 +28,9 @@ export class CreateComponent implements OnInit {
       gender: [null, Validators.required],
       disabled: [false],
     });
+  }
+
+  cancel(){
+    this.router.navigate(['']);
   }
 }
