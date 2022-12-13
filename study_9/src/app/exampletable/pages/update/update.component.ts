@@ -31,7 +31,11 @@ export class UpdateComponent implements OnInit {
 
   submitForm(): void {
     debugger;
-    this._http.addData(this.validateForm.value).subscribe((data: any) => {
+    let payload = {
+      ...this.validateForm.value,
+      id:this.id,
+    };
+    this._http.updataData(payload).subscribe((data: any) => {
       this.router.navigate(['']);
     });
   }

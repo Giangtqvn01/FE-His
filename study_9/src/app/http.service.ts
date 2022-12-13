@@ -42,4 +42,12 @@ export class HttpService {
     return of({ data: this.listOfData });
   }
 
+  updataData(payload:any){
+    debugger;
+    this.listOfData =this.listOfData.filter((data:any)=> data.id != payload.id );
+
+    this.listOfData = [ ...this.listOfData, payload];
+    return of({ data: this.listOfData });
+  }
+
 }
